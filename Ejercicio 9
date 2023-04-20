@@ -1,0 +1,99 @@
+// Clase Persona
+class Persona {
+    protected int edad;
+    protected String nombre;
+    protected String telefono;
+
+    // Constructor de la clase Persona
+    public Persona(int edad, String nombre, String telefono) {
+        this.edad = edad;
+        this.nombre = nombre;
+        this.telefono = telefono;
+    }
+
+    // Métodos getter y setter para acceder a las variables
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+}
+
+// Clase Cliente que hereda de Persona
+class Cliente extends Persona {
+    private double credito;
+
+    // Constructor de la clase Cliente
+    public Cliente(int edad, String nombre, String telefono, double credito) {
+        super(edad, nombre, telefono);
+        this.credito = credito;
+    }
+
+    // Método getter para acceder a la variable credito
+    public double getCredito() {
+        return credito;
+    }
+
+    // Método setter para establecer el valor de la variable credito
+    public void setCredito(double credito) {
+        this.credito = credito;
+    }
+}
+
+// Clase Trabajador que hereda de Persona
+class Trabajador extends Persona {
+    private double salario;
+
+    // Constructor de la clase Trabajador
+    public Trabajador(int edad, String nombre, String telefono, double salario) {
+        super(edad, nombre, telefono);
+        this.salario = salario;
+    }
+
+    // Método getter para acceder a la variable salario
+    public double getSalario() {
+        return salario;
+    }
+
+    // Método setter para establecer el valor de la variable salario
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+}
+
+// Ejemplo de uso de las clases
+public class Main {
+    public static void main(String[] args) {
+        // Creación de un objeto de la clase Cliente
+        Cliente cliente = new Cliente(25, "Juan", "123456789", 1000.0);
+        System.out.println("Edad del cliente: " + cliente.getEdad());
+        System.out.println("Nombre del cliente: " + cliente.getNombre());
+        System.out.println("Teléfono del cliente: " + cliente.getTelefono());
+        System.out.println("Crédito del cliente: " + cliente.getCredito());
+
+        // Creación de un objeto de la clase Trabajador
+        Trabajador trabajador = new Trabajador(30, "Pedro", "987654321", 2000.0);
+        System.out.println("Edad del trabajador: " + trabajador.getEdad());
+        System.out.println("Nombre del trabajador: " + trabajador.getNombre());
+        System.out.println("Teléfono del trabajador: " + trabajador.getTelefono());
+        System.out.println("Salario del trabajador: " + trabajador.getSalario());
+    }
+}
