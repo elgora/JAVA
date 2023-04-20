@@ -1,0 +1,58 @@
+class Persona {
+    private int edad;
+    private String nombre;
+    private String telefono;
+
+    // Constructor
+    public Persona(int edad, String nombre, String telefono) {
+        this.edad = edad;
+        this.nombre = nombre;
+        this.telefono = telefono;
+    }
+
+    // Getters
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    // Setters
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public static void main(String[] args) {
+        // Crear un objeto de Persona
+        Persona persona1 = new Persona(25, "Juan", "1234567890");
+
+        // Acceder a las propiedades utilizando los getters
+        System.out.println("Edad: " + persona1.getEdad());
+        System.out.println("Nombre: " + persona1.getNombre());
+        System.out.println("Teléfono: " + persona1.getTelefono());
+
+        // Modificar las propiedades utilizando los setters
+        persona1.setEdad(26);
+        persona1.setNombre("Juanito");
+        persona1.setTelefono("0987654321");
+
+        // Acceder a las propiedades modificadas utilizando los getters
+        System.out.println("Edad actualizada: " + persona1.getEdad());
+        System.out.println("Nombre actualizado: " + persona1.getNombre());
+        System.out.println("Teléfono actualizado: " + persona1.getTelefono());
+    }
+}
