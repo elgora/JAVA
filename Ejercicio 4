@@ -1,0 +1,55 @@
+clase pública Principal {
+    public static void main(String[] args) {
+        // Condición si
+        int numeroIf = 5;
+        if (numeroIf > 0) {
+            System.out.println("El número es positivo.");
+        } si no (numeroIf < 0) {
+            System.out.println("El número es negativo.");
+        } demás {
+            System.out.println("El número es 0.");
+        }
+
+        // Bucle Mientras
+        int numeroMientras = 0;
+        while (numeroMientras < 3) {
+            numeroMientras++;
+            System.out.println("El valor de numeroWhile es: " + numeroWhile);
+        }
+
+        // Bucle Hacer Mientras
+        int numeroDoMientras = 0;
+        hacer {
+            numeroDoMientras++;
+            System.out.println("El valor de numeroDoWhile es: " + numeroDoWhile);
+        } while (numeroDoWhile < 3);
+
+        // Bucle Para
+        for (int numeroPara = 0; numeroPara <= 3; numeroPara++) {
+            System.out.println("El valor de numeroFor es: " + numeroFor);
+        }
+
+        // Cambiar
+        String estacion = "verano";
+        cambiar (estacionar) {
+            caso "invierno":
+                System.out.println("Es invierno.");
+                romper;
+            caso "primavera":
+                System.out.println("Es primavera.");
+                romper;
+            caso "verano":
+                System.out.println("Es verano.");
+                romper;
+            caso "otoño":
+                System.out.println("Es otoño.");
+                romper;
+            por defecto:
+                System.out.println("Estación desconocida.");
+        }
+    }
+}
+Pie de página
+© 2023 GitHub, Inc.
+Pie de página de navegación
+Términos
